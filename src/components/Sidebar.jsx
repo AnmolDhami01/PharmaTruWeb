@@ -7,10 +7,11 @@ const useStyles = makeStyles({
   sidebar: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    // alignItems: "center",
     color: "#ffffff",
     "& a": {
       color: "white",
+      postion: "fixed",
     },
   },
   sidebarLink: {

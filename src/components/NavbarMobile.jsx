@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     justifyContent: "flex-start",
     alignItems: "center",
     background: "#191919",
-    padding: "10px 20px",
+    padding: "5px 20px",
   },
   navbar1: {
     display: "flex",
@@ -31,100 +31,66 @@ function NavbarMobile() {
   return (
     <>
       <div className={classes.navbar}>
-        <Typography pr={2}>
-          <a
-            href="mailto:Info@tru-web.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              paddingRight: "15px",
-            }}
-          >
-            <Mail style={{ color: "white", marginLeft: "25px" }} />
-            <Hidden smDown>Info@tru-web.com</Hidden>
-          </a>
-        </Typography>
-        <Typography>
-          <a
-            href="tel:8628825697"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              paddingRight: "25px",
-            }}
-          >
-            <PhoneInTalkSharp style={{ color: "white" }} />
-            <Hidden smDown>+91-8628825697</Hidden>
-          </a>
-        </Typography>
+        <Button
+          href="mailto:Info@tru-web.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+          }}
+          startIcon={<Mail />}
+        ></Button>
 
-        <Typography>
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              paddingRight: "25px",
-            }}
-          >
-            <FacebookIcon style={{ color: "white" }} />
-            {/* <Hidden smDown>Fb.com/tru-webmedia</Hidden> */}
-          </a>
-        </Typography>
+        <Button
+          href="tel:8628825697"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+          }}
+          startIcon={<PhoneInTalkSharp />}
+        ></Button>
 
-        <Typography>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              paddingRight: "25px",
-            }}
-          >
-            <InstagramIcon style={{ color: "white" }} />
-            {/* <Hidden smDown>Instagram.com/tru-webmedia</Hidden> */}
-          </a>
-        </Typography>
+        <Button
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+          }}
+          startIcon={<FacebookIcon />}
+        ></Button>
 
-        <Typography>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              paddingRight: "25px",
-            }}
-          >
-            <TwitterIcon style={{ color: "white" }} />
-            {/* <Hidden smDown>Twitter.com/tru-webmedia</Hidden> */}
-          </a>
-        </Typography>
+        <Button
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+          }}
+          startIcon={<InstagramIcon />}
+        ></Button>
 
-        <Typography>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              paddingRight: "25px",
-            }}
-          >
-            <LinkedInIcon style={{ color: "white" }} />
-            {/* <Hidden smDown>LinkedIn.com/tru-webmedia</Hidden> */}
-          </a>
-        </Typography>
+        <Button
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+          }}
+          startIcon={<TwitterIcon />}
+        ></Button>
+
+        <Button
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+            margin: "-15px",
+          }}
+          startIcon={<LinkedInIcon />}
+        ></Button>
       </div>
     </>
   );

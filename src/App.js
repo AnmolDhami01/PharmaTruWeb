@@ -24,15 +24,29 @@ import Navbar from "./components/Navbar";
 import NavbarMobile from "./components/NavbarMobile";
 import Coursal from "./components/Coursal";
 import { Hidden } from "@mui/material";
-
+import { ClassNames } from "@emotion/react";
+import { makeStyles } from "@mui/styles";
+import Sidebar from "./components/Sidebar";
+import SimpleMenu from "./components/SimpleMenu";
+const useStyles = makeStyles({
+  PharmaContainer: {
+    // display: "flex",
+    // padding: "10px 20px",
+    maxWidth: "1520px",
+  },
+});
 function App() {
   return (
-    <>
-      <Hidden smDown>
-        <Navbar />
-      </Hidden>
+    <div>
+      {/* <Hidden smDown>
+        <Sidebar />
+      </Hidden> */}
+
       <Hidden smUp>
         <NavbarMobile />
+      </Hidden>
+      <Hidden smDown>
+        <Navbar />
       </Hidden>
       <Navbar1 />
       <Routes>
@@ -40,7 +54,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
-        {/* <Route path="/contactus" element={<ContactUs />}></Route> */}
+
         <Route path="/contactus" element={<ContactUs2 />}></Route>
         <Route
           path="/antibiotics"
@@ -54,11 +68,11 @@ function App() {
         <Route path="/syrups" element={<Syrups />}></Route>
         <Route path="/dermatology" element={<Dermatology />}></Route>
         <Route path="/otolaryngology" element={<Otolaryngology />}></Route>
-        <Route path="/change" element={<Coursal />}></Route>
+        <Route path="/change" element={<SimpleMenu />}></Route>
 
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
-    </>
+    </div>
   );
 }
 

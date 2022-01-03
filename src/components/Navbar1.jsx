@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "85ch",
     },
   },
 }));
@@ -191,7 +191,7 @@ export default function PrimarySearchAppBar() {
             sx={{ display: { xs: "none", sm: "block" } }}
           >
             <Link className="Link" to="/">
-              PharmaTruWeb
+              PharmaWeb
             </Link>
           </Typography>
           <Search>
@@ -248,22 +248,19 @@ export default function PrimarySearchAppBar() {
             </IconButton> */}
           </Box>
           <Link className="Link" to="signup">
-            <Button color="inherit">
-              <PersonAddAltSharpIcon />
+            <Button color="inherit" startIcon={<PersonAddAltSharpIcon />}>
               <Hidden smDown>Join Free</Hidden>
             </Button>
           </Link>
 
           <Link className="Link" to="signin">
-            <Button color="inherit">
-              <PersonIcon />
+            <Button color="inherit" startIcon={<PersonIcon />}>
               <Hidden smDown>Sign In</Hidden>
             </Button>
           </Link>
 
           <Link className="Link" to="contactus">
-            <Button color="inherit">
-              <EmailSharpIcon />
+            <Button color="inherit" startIcon={<EmailSharpIcon />}>
               <Hidden smDown>Post Requirement</Hidden>
             </Button>
           </Link>

@@ -13,23 +13,25 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const useStyles = makeStyles({
   navbar: {
     display: "flex",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    background: "#191919",
+
     padding: "10px 20px",
   },
   navbar1: {
     display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    background: "#191919",
+
     padding: "10px 20px",
+  },
+  topbar: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    background: "black",
   },
 });
 function Navbar() {
   const classes = useStyles();
   return (
-    <>
+    <div className={classes.topbar}>
       <div className={classes.navbar}>
         <Typography pr={2}>
           <a
@@ -56,14 +58,16 @@ function Navbar() {
             style={{
               color: "white",
               textDecoration: "none",
-              paddingRight: "908px",
+              // paddingRight: "908px",
             }}
           >
             <PhoneInTalkSharp style={{ color: "white", marginRight: "7px" }} />
             <Hidden smDown>+91-8628825697</Hidden>
           </a>
         </Typography>
+      </div>
 
+      <div className={classes.navbar1}>
         <Typography>
           <a
             href="https://www.facebook.com/"
@@ -128,7 +132,7 @@ function Navbar() {
           </a>
         </Typography>
       </div>
-    </>
+    </div>
   );
 }
 

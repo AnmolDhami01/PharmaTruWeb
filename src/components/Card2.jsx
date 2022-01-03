@@ -5,37 +5,44 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 export default function Card2(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="Photos"
-        height="250"
-        // image="https://source.unsplash.com/random"
-        image={props.image}
-        style={props.style}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {/* Lizard */}
-          {props.heading}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {/* Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica */}
+    <Link to="/change" style={{ textDecoration: "none" }}>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          component="img"
+          alt="Photos"
+          height="250"
+          // image="https://source.unsplash.com/random"
+          image={props.image}
+          style={props.style}
+        />
+        <CardContent>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            align="center"
+            style={{ textDecoration: "none" }}
+          >
+            {/* Lizard */}
+            {props.heading}
+          </Typography>
+          {/* <Typography variant="body2" color="text.secondary">
           {props.body}
-        </Typography>
-      </CardContent>
-      <CardActions>
+        </Typography> */}
+        </CardContent>
+        {/* <CardActions>
         <Button style={{ color: "#0c8540" }} size="small">
           View
         </Button>
         <Button style={{ color: "#0c8540" }} size="small">
           Research
         </Button>
-      </CardActions>
-    </Card>
+      </CardActions> */}
+      </Card>
+    </Link>
   );
 }

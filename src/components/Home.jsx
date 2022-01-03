@@ -16,7 +16,7 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Card1 from "./Card";
-import { Paper } from "@mui/material";
+import { createMuiTheme, Hidden, Paper } from "@mui/material";
 import Monoply from "../static/istockphoto-486763752-612x612.jpg";
 import Cancer from "../static/c13c84ef12b0467ca0ba883951aa11ec.jpg";
 import EyeDrops from "../static/download.jpg";
@@ -30,9 +30,19 @@ import Contract from "../static/Contract.jpg";
 import HandWash from "../static/HandWash.jpg";
 import HandSanitizer from "../static/HandSanitizer.jpg";
 import PcdPharma from "../static/PcdPharma.jpg";
+import Customers from "../static/Customers.jpg";
 import ThirdPartyManufacture from "../static/ThirdPartyManufacture.jpg";
 import Card2 from "./Card2";
 import Coursal from "./Coursal";
+import { green } from "@mui/material/colors";
+import SimpleMenu from "./SimpleMenu";
+import MenuIcon from "@mui/icons-material/Menu";
+import MapsUgcRoundedIcon from "@mui/icons-material/MapsUgcRounded";
+import SecurityRoundedIcon from "@mui/icons-material/SecurityRounded";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import ThumbUpAltSharpIcon from "@mui/icons-material/ThumbUpAltSharp";
+import Video from "./Video";
+import BasicPopover from "./BasicPopover";
 
 function Copyright() {
   return (
@@ -52,7 +62,18 @@ function Copyright() {
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: green[500],
+    },
+    typography: {
+      h2: {
+        fontSize: 14,
+      },
+    },
+  },
+});
 
 export default function Home() {
   return (
@@ -63,12 +84,11 @@ export default function Home() {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: "background.paper",
             pt: 5,
             pb: 6,
           }}
         >
-          <Container maxWidth="lg">
+          <Container maxWidth="lg" component={Paper}>
             <Typography
               component="h1"
               variant="h2"
@@ -76,7 +96,7 @@ export default function Home() {
               color="text.primary"
               gutterBottom
             >
-              Pharma TruWeb
+              PharmaWeb
             </Typography>
 
             <Typography
@@ -85,7 +105,7 @@ export default function Home() {
               color="text.secondary"
               paragraph
             >
-              PharmaTruWeb is a complete B2B Pharmaceutical marketplace in India
+              PharmaWeb is a complete B2B Pharmaceutical marketplace in India
               where you can find top-rated Pharma companies in India who are
               dealing in PCD Pharma Franchise, monopoly Pharma Franchise, Third
               Party Manufacturing and much more. The idea for launching struck
@@ -94,35 +114,103 @@ export default function Home() {
               industry by providing digital solutions for the past 8+ years
             </Typography>
 
-            <Grid container>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={3} lg={3}>
+                <SimpleMenu
+                  heading={"Categories"}
+                  item1={"PCD/Pharma Frannchise"}
+                  item2={"Cosematics"}
+                  item3={"Pharma Bussiness"}
+                  item4={"Ent Medicine"}
+                />
+              </Grid>
+              <Grid item xs={12} md={3} lg={3}>
+                <SimpleMenu
+                  heading={"PCD/PHARMA FRANCHISE"}
+                  item1={"Deram Frannchise"}
+                  item2={"Homopathic Frannchise"}
+                  item3={"Ayurvedic Frannchise"}
+                  item4={"Allopathic Frannchise"}
+                />
+              </Grid>
+              <Grid item xs={12} md={3} lg={3}>
+                <SimpleMenu
+                  heading={"Third Party"}
+                  item1={"PCD/Pharma Frannchise"}
+                  item2={"Homopathic Frannchise"}
+                  item3={"Ayurvedic Frannchise"}
+                  item4={"Allopathic Frannchise"}
+                />
+              </Grid>
+              <Grid item xs={12} md={3} lg={3}>
+                <SimpleMenu
+                  heading={"Third Party Manufacturer"}
+                  item1={"PCD/Pharma Frannchise"}
+                  item2={"Homopathic Frannchise"}
+                  item3={"Ayurvedic Frannchise"}
+                  item4={"Allopathic Frannchise"}
+                />
+              </Grid>
+            </Grid>
+
+            <Grid container pt={5}>
               <Grid item md={12} xs={12}>
                 <Coursal />
               </Grid>
             </Grid>
-
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={1}
-              justifyContent="center"
-            >
-              <Button style={{ background: "#0c8540" }} variant="contained">
-                Post your demands
-              </Button>
-              <Button style={{ background: "#0c8540" }} variant="contained">
-                Your enquiry is verified
-              </Button>
-              <Button style={{ background: "#0c8540" }} variant="contained">
-                Your requirements are sent to right suppliers
-              </Button>
-              <Button style={{ background: "#0c8540" }} variant="contained">
-                Suppliers will contact you
-              </Button>
-            </Stack>
           </Container>
         </Box>
 
-        <Paper>
+        <Hidden smDown>
+          <Stack
+            sx={{ pt: 4, pb: 5 }}
+            direction="row"
+            spacing={1}
+            justifyContent="center"
+          >
+            <Button
+              startIcon={<MapsUgcRoundedIcon />}
+              style={{ background: "#0c8540", color: "white" }}
+              variant="contained"
+            >
+              Post your demands
+            </Button>
+
+            <Button
+              startIcon={<SecurityRoundedIcon />}
+              style={{ background: "#0c8540", color: "white" }}
+              variant="contained"
+            >
+              Your enquiry is verified
+            </Button>
+
+            <Button
+              startIcon={<RocketLaunchIcon />}
+              style={{ background: "#0c8540", color: "white" }}
+              variant="contained"
+            >
+              Your requirements are sent to right suppliers
+            </Button>
+
+            <Button
+              startIcon={<ThumbUpAltSharpIcon />}
+              style={{ background: "#0c8540", color: "white" }}
+              variant="contained"
+            >
+              Suppliers will contact you
+            </Button>
+          </Stack>
+        </Hidden>
+
+        {/* </Box> */}
+
+        <Container
+          component={Paper}
+          sx={{
+            pt: 5,
+            pb: 6,
+          }}
+        >
           <Typography
             variant="h5"
             align="center"
@@ -143,7 +231,7 @@ export default function Home() {
             image={PcdPharma}
             alt="random"
           />
-        </Paper>
+        </Container>
 
         <Container sx={{ py: 5 }}>
           <Grid container spacing={2}>
@@ -238,7 +326,13 @@ export default function Home() {
           </Grid>
         </Container>
 
-        <Paper>
+        <Container
+          component={Paper}
+          sx={{
+            pt: 5,
+            pb: 6,
+          }}
+        >
           <Typography
             variant="h5"
             align="center"
@@ -259,7 +353,7 @@ export default function Home() {
             image={ThirdPartyManufacture}
             alt="random"
           />
-        </Paper>
+        </Container>
 
         <Container sx={{ py: 5 }}>
           <Grid container spacing={2}>
@@ -353,11 +447,69 @@ export default function Home() {
             </Grid>
           </Grid>
         </Container>
+
+        <Container sx={{ pt: 5, mb: 5, pb: 3 }} component={Paper}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={12} lg={12}>
+              <Typography
+                variant="h5"
+                align="center"
+                color="text.secondary"
+                paragraph
+                style={{ color: "#0c8540" }}
+              >
+                Post Your Requirment for Pharma Companies
+              </Typography>
+              <Box textAlign="center">
+                <BasicPopover style={{ marginLeft: "470px" }} />
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+
+        <Container
+          component={Paper}
+          sx={{
+            pt: 5,
+            pb: 6,
+          }}
+        >
+          <Typography
+            variant="h5"
+            align="center"
+            color="text.secondary"
+            paragraph
+            style={{ color: "#0c8540" }}
+          >
+            Few words from our Customers..
+          </Typography>
+          <CardMedia
+            component="img"
+            sx={{
+              // 16:9
+              pt: "0.25%",
+              maxWidth: 1520,
+              maxHeight: 500,
+            }}
+            image={Customers}
+            alt="random"
+          />
+        </Container>
+
+        <Container sx={{ py: 5 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={4} lg={4}>
+              <Video />
+            </Grid>
+            <Grid item xs={12} md={4} lg={4}>
+              <Video />
+            </Grid>
+            <Grid item xs={12} md={4} lg={4}>
+              <Video />
+            </Grid>
+          </Grid>
+        </Container>
       </main>
-
-      {/* <Container sx={{ py: 5 }} maxWidth="lg" s> */}
-
-      {/* </Container> */}
 
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
@@ -370,11 +522,11 @@ export default function Home() {
           color="text.secondary"
           component="p"
         >
-          The main purpose of PharmaTruWeb.com is to bring together entire
-          Pharma Industry at one place and provide a platform to importers,
-          exporters, manufacturers, traders, services providers, distributors,
-          wholesalers and governmental agencies to find trade opportunities and
-          promote their products and services online
+          The main purpose of PharmaWeb.com is to bring together entire Pharma
+          Industry at one place and provide a platform to importers, exporters,
+          manufacturers, traders, services providers, distributors, wholesalers
+          and governmental agencies to find trade opportunities and promote
+          their products and services online
         </Typography>
         <Copyright />
       </Box>
