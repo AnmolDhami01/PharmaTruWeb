@@ -15,7 +15,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
-import { Button, Hidden, Modal } from "@mui/material";
+import { Button, Container, Hidden, Modal } from "@mui/material";
 import { Link } from "react-router-dom";
 import PersonAddAltSharpIcon from "@mui/icons-material/PersonAddAltSharp";
 import EmailSharpIcon from "@mui/icons-material/EmailSharp";
@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "85ch",
+      width: "45ch",
     },
   },
 }));
@@ -173,8 +173,9 @@ export default function PrimarySearchAppBar() {
           background: "#0c8540",
         }}
       >
-        <Toolbar>
-          {/* <IconButton
+        <Container maxWidth="xl">
+          <Toolbar>
+            {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -183,29 +184,29 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <SideBar2 />
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            <Link className="Link" to="/">
-              PharmaWeb
-            </Link>
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            {/* <IconButton
+            <SideBar2 />
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: "none", sm: "block" } }}
+            >
+              <Link className="Link" to="/">
+                PharmaWeb
+              </Link>
+            </Typography>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              {/* <IconButton
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
@@ -246,25 +247,26 @@ export default function PrimarySearchAppBar() {
             >
               <MoreIcon />
             </IconButton> */}
-          </Box>
-          <Link className="Link" to="signup">
-            <Button color="inherit" startIcon={<PersonAddAltSharpIcon />}>
-              <Hidden smDown>Join Free</Hidden>
-            </Button>
-          </Link>
+            </Box>
+            <Link className="Link" to="signup">
+              <Button color="inherit" startIcon={<PersonAddAltSharpIcon />}>
+                <Hidden smDown>Join Free</Hidden>
+              </Button>
+            </Link>
 
-          <Link className="Link" to="signin">
-            <Button color="inherit" startIcon={<PersonIcon />}>
-              <Hidden smDown>Sign In</Hidden>
-            </Button>
-          </Link>
+            <Link className="Link" to="signin">
+              <Button color="inherit" startIcon={<PersonIcon />}>
+                <Hidden smDown>Sign In</Hidden>
+              </Button>
+            </Link>
 
-          <Link className="Link" to="contactus">
-            <Button color="inherit" startIcon={<EmailSharpIcon />}>
-              <Hidden smDown>Post Requirement</Hidden>
-            </Button>
-          </Link>
-        </Toolbar>
+            <Link className="Link" to="contactus">
+              <Button color="inherit" startIcon={<EmailSharpIcon />}>
+                <Hidden smDown>Post Requirement</Hidden>
+              </Button>
+            </Link>
+          </Toolbar>
+        </Container>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}

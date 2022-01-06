@@ -23,25 +23,29 @@ import ContactUs2 from "./components/ContactUs2";
 import Navbar from "./components/Navbar";
 import NavbarMobile from "./components/NavbarMobile";
 import Coursal from "./components/Coursal";
-import { Hidden } from "@mui/material";
+import { Container, Hidden } from "@mui/material";
 import { ClassNames } from "@emotion/react";
 import { makeStyles } from "@mui/styles";
 import Sidebar from "./components/Sidebar";
 import SimpleMenu from "./components/SimpleMenu";
-const useStyles = makeStyles({
-  PharmaContainer: {
-    // display: "flex",
-    // padding: "10px 20px",
-    maxWidth: "1520px",
-  },
-});
-function App() {
-  return (
-    <div>
-      {/* <Hidden smDown>
-        <Sidebar />
-      </Hidden> */}
+import { Box } from "@mui/system";
+import Collapse from "./components/Collapser";
+import Collapser from "./components/Collapser";
 
+import SidebarTesting from "./components/SidebarTesting";
+import Caursal from "./components/Caursal";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: "1300px",
+    },
+  },
+}));
+function App() {
+  // const classes = useStyles();
+  return (
+    <div className="Poppins_font">
       <Hidden smUp>
         <NavbarMobile />
       </Hidden>
@@ -49,6 +53,7 @@ function App() {
         <Navbar />
       </Hidden>
       <Navbar1 />
+
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -69,6 +74,7 @@ function App() {
         <Route path="/dermatology" element={<Dermatology />}></Route>
         <Route path="/otolaryngology" element={<Otolaryngology />}></Route>
         <Route path="/change" element={<SimpleMenu />}></Route>
+        <Route path="/active" element={<Caursal />}></Route>
 
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>

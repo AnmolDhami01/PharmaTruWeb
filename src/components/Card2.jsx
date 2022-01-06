@@ -10,22 +10,27 @@ import { Link } from "react-router-dom";
 export default function Card2(props) {
   return (
     <Link to="/change" style={{ textDecoration: "none" }}>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, borderRaduis: "20px" }}>
         <CardMedia
           component="img"
           alt="Photos"
           height="250"
-          // image="https://source.unsplash.com/random"
           image={props.image}
           style={props.style}
         />
-        <CardContent>
+        <CardContent style={{ paddingBottom: "10px" }}>
           <Typography
             gutterBottom
             variant="h5"
             component="div"
             align="center"
-            style={{ textDecoration: "none" }}
+            fontFamily="Poppins"
+            style={{
+              textDecoration: "none",
+              paddingBottom: "0px",
+              fontWeight: "800",
+              fontSize: "1.2rem",
+            }}
           >
             {/* Lizard */}
             {props.heading}

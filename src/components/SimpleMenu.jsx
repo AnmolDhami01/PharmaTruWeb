@@ -133,7 +133,11 @@ function SimpleMenu(props) {
         onClose={handleClose}
         onMouseLeave={handleClose}
       >
-        <Button startIcon={<MedicalServices />} onClick={handleClose}>
+        <Button
+          fontFamily="Poppins"
+          startIcon={<MedicalServices />}
+          onClick={handleClose}
+        >
           {props.item1}
         </Button>
         <Button startIcon={<MedicalServices />} onClick={handleClose}>
