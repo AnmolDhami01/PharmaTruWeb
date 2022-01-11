@@ -14,7 +14,7 @@ export default function Card2(props) {
         <CardMedia
           component="img"
           alt="Photos"
-          height="250"
+          height="288"
           image={props.image}
           style={props.style}
         />

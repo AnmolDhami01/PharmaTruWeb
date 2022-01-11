@@ -25,7 +25,7 @@ const images = [
     imgPath: `${BANNER3}`,
   },
   {
-    imgPath: `${BANNER1}`,
+    imgPath: `${BANNER2}`,
   },
 ];
 
@@ -47,7 +47,8 @@ function Caursal() {
   };
 
   return (
-    <Box sx={{ maxWidth: 1500, flexGrow: 1 }}>
+    // <Box sx={{ maxWidth: 1520, flexGrow: 1 }}>
+    <div>
       <Paper
         square
         elevation={0}
@@ -73,9 +74,8 @@ function Caursal() {
               <Box
                 component="img"
                 sx={{
-                  //   height: "100vh",
                   display: "block",
-                  maxWidth: 1500,
+                  height: "20%",
                   overflow: "hidden",
                   width: "100%",
                   //   width: 600,
@@ -87,36 +87,9 @@ function Caursal() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        activeStep={activeStep}
-        nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
-            Next
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Back
-          </Button>
-        }
-      />
-    </Box>
+
+      {/* </Box> */}
+    </div>
   );
 }
 

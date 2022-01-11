@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home";
 
@@ -7,33 +6,34 @@ import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import SignIn from "./components/SignIn";
 
-import ContactUs from "./components/ContactUs";
 import SignUp from "./components/SignUp";
-import AntibioticsAntibacterial from "./components/SidebarComponents/AntibioticsAntibacterial";
-import GeneralMedicines from "./components/SidebarComponents/GeneralMedicines";
+
 import HeartCardiac from "./components/SidebarComponents/HeartCardiac";
 import HerbalAyurvedic from "./components/SidebarComponents/HerbalAyurvedic";
-import Injectables from "./components/SidebarComponents/Injectables";
-import LiverProductes from "./components/SidebarComponents/LiverProductes";
-import Syrups from "./components/SidebarComponents/Syrups";
-import Dermatology from "./components/SidebarComponents/Dermatology";
-import Otolaryngology from "./components/SidebarComponents/Otolaryngology";
+
 import ErrorPage from "./components/ErrorPage";
 import ContactUs2 from "./components/ContactUs2";
 import Navbar from "./components/Navbar";
 import NavbarMobile from "./components/NavbarMobile";
-import Coursal from "./components/Coursal";
-import { Container, Hidden } from "@mui/material";
-import { ClassNames } from "@emotion/react";
-import { makeStyles } from "@mui/styles";
-import Sidebar from "./components/Sidebar";
-import SimpleMenu from "./components/SimpleMenu";
-import { Box } from "@mui/system";
-import Collapse from "./components/Collapser";
-import Collapser from "./components/Collapser";
 
-import SidebarTesting from "./components/SidebarTesting";
-import Caursal from "./components/Caursal";
+import { Hidden } from "@mui/material";
+
+import { makeStyles } from "@mui/styles";
+
+import SimpleMenu from "./components/SimpleMenu";
+
+import HoverLinks from "./components/HoverLinks";
+import SidebarTesting1 from "./components/SidebarTesting1";
+import SidebarTesting3 from "./components/SidebarTesting3";
+import PharmaFranchise from "./components/SidebarComponents/PharmaFranchise";
+import ThirdParty from "./components/SidebarComponents/ThirdParty";
+import CosmeticsDerma from "./components/SidebarComponents/CosmeticsDerma";
+import AyurvedicPCD from "./components/SidebarComponents/AyurvedicPCD";
+import AllopathicDrug from "./components/SidebarComponents/AllopathicDrug";
+import ENTMedicine from "./components/SidebarComponents/ENTMedicine";
+import MedicineManufacturing from "./components/SidebarComponents/MedicineManufacturing";
+import PharmaBusiness from "./components/SidebarComponents/PharmaBusiness";
+import CardiacDiabatic from "./components/SidebarComponents/CardiacDiabatic";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,9 +46,6 @@ function App() {
   // const classes = useStyles();
   return (
     <div className="Poppins_font">
-      <Hidden smUp>
-        <NavbarMobile />
-      </Hidden>
       <Hidden smDown>
         <Navbar />
       </Hidden>
@@ -61,20 +58,22 @@ function App() {
         <Route path="/signup" element={<SignUp />}></Route>
 
         <Route path="/contactus" element={<ContactUs2 />}></Route>
-        <Route
-          path="/antibiotics"
-          element={<AntibioticsAntibacterial />}
-        ></Route>
-        <Route path="/gernalMedicines" element={<GeneralMedicines />}></Route>
+
         <Route path="/heartCardiac" element={<HeartCardiac />}></Route>
         <Route path="/herbalAyurvedic" element={<HerbalAyurvedic />}></Route>
-        <Route path="/injectables" element={<Injectables />}></Route>
-        <Route path="/liverProductes" element={<LiverProductes />}></Route>
-        <Route path="/syrups" element={<Syrups />}></Route>
-        <Route path="/dermatology" element={<Dermatology />}></Route>
-        <Route path="/otolaryngology" element={<Otolaryngology />}></Route>
+        <Route path="/pcdfranchise" element={<PharmaFranchise />}></Route>
+        <Route path="/thirdparty" element={<ThirdParty />}></Route>
+        <Route path="/cosmetics" element={<CosmeticsDerma />}></Route>
+        <Route path="/ayurvedic" element={<AyurvedicPCD />}></Route>
+        <Route path="/allopathic" element={<AllopathicDrug />}></Route>
+        <Route path="/entmedcine" element={<ENTMedicine />}></Route>
+        <Route path="/medicine" element={<MedicineManufacturing />}></Route>
+        <Route path="/pharmabusiness" element={<PharmaBusiness />}></Route>
+        <Route path="/cardiacDiabtic" element={<CardiacDiabatic />}></Route>
+
         <Route path="/change" element={<SimpleMenu />}></Route>
-        <Route path="/active" element={<Caursal />}></Route>
+        <Route path="/active" element={<HoverLinks />}></Route>
+        <Route path="/test" element={<SidebarTesting3 />}></Route>
 
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>

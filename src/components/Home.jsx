@@ -1,10 +1,7 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
+
 import Button from "@mui/material/Button";
-import CameraIcon from "@mui/icons-material/PhotoCamera";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
+
 import CardMedia from "@mui/material/CardMedia";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
@@ -16,27 +13,19 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Card1 from "./Card";
-import { createMuiTheme, Hidden, Paper } from "@mui/material";
-import Monoply from "../static/istockphoto-486763752-612x612.jpg";
-import Cancer from "../static/c13c84ef12b0467ca0ba883951aa11ec.jpg";
-import EyeDrops from "../static/download.jpg";
-import Dental from "../static/dental.jpg";
-import Injectable from "../static/Injectable.jpg";
-import Ophthalmic from "../static/Ophthalmic.jpg";
+import { Hidden, Paper } from "@mui/material";
+
 import Derma from "../static/Derma.jpg";
-import Injection from "../static/Injection.jpg";
+
 import Pharma from "../static/Pharma.jpg";
 import Contract from "../static/Contract.jpg";
-import HandWash from "../static/HandWash.jpg";
-import HandSanitizer from "../static/HandSanitizer.jpg";
-import Ortho from "../static/Ortho.jpg";
-import Ayurvedic from "../static/Ayurvedic.jpg";
-import PcdPharma from "../static/PcdPharma.jpg";
+
 import Customers from "../static/Customers.jpg";
 import ThirdPartyManufacture from "../static/ThirdPartyManufacture.jpg";
 import Card2 from "./Card2";
-import Coursal from "./Coursal";
+
 import { green } from "@mui/material/colors";
+
 import SimpleMenu from "./SimpleMenu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MapsUgcRoundedIcon from "@mui/icons-material/MapsUgcRounded";
@@ -45,15 +34,26 @@ import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import ThumbUpAltSharpIcon from "@mui/icons-material/ThumbUpAltSharp";
 import Video from "./Video";
 import BasicPopover from "./BasicPopover";
-import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 import Collapser from "./Collapser";
-import ControlledAccordions from "./ControlledAccordions";
+
 import SidebarTesting from "./SidebarTesting";
 import ControlledAccordion from "./ControlledAccordions";
+import FullWidthTabs from "./FullWidthTabs";
 import Caursal from "./Caursal";
 
+import HoverLinks from "./HoverLinks";
+import SidebarTesting1 from "./SidebarTesting1";
+import SpeedDialTooltipOpen from "./SpeedDialTooltipOpen";
+import { makeStyles } from "@mui/styles";
+import SlideShow from "./SlideShow";
+import mainlogo from "../static/mainlogo.png";
+const useStyles = makeStyles({
+  Caursal_Main: {},
+});
+
 function Copyright() {
+  const classes = useStyles();
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
@@ -74,8 +74,12 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const theme = createTheme({
   palette: {
     primary: {
-      main: green[500],
+      main: "#0c8540",
+      secondary: "#f8b500",
     },
+    // secondary: {
+    //   main: amber,
+    // },
 
     typography: {
       h1: {
@@ -98,6 +102,7 @@ const theme = createTheme({
 });
 
 export default function Home() {
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -129,157 +134,320 @@ export default function Home() {
           </CardMedia>
         </Container> */}
 
+        {/* <div className={classes.Caursal_Main}> */}
         <Container maxWidth="xl">
           <Caursal />
         </Container>
+        {/* </div> */}
 
-        <Box
-          sx={{
-            pt: 5,
-            pb: 2,
-          }}
-        >
-          <Container maxWidth="xl">
-            <Grid container component={Paper}>
-              <Grid item xs={12} md={12} lg={12}>
-                <Typography
-                  variant="h5"
-                  align="center"
-                  color="text.secondary"
-                  paragraph
-                  style={{ color: "#0c8540" }}
-                  className="Poppins_font"
-                  fontFamily="Poppins"
-                >
-                  Browse Our Categories
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={3} lg={3}>
-                <SimpleMenu
-                  heading={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      CATEGORIES
-                    </Typography>
-                  }
-                  item1={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      PCD/PHARMA FRANCHISE
-                    </Typography>
-                  }
-                  item2={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      COSEMATICS
-                    </Typography>
-                  }
-                  item3={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      PHARMA BUSSINESS
-                    </Typography>
-                  }
-                  item4={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      ENT MEDICINE
-                    </Typography>
-                  }
-                />
-              </Grid>
-              <Grid item xs={12} md={3} lg={3}>
-                <SimpleMenu
-                  heading={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      PCD/PHARMA FRANCHISE
-                    </Typography>
-                  }
-                  item1={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      DERMA FRANCHISE
-                    </Typography>
-                  }
-                  item2={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      HOMOPATHIC FRANCHISE
-                    </Typography>
-                  }
-                  item3={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      AYURVEDIC FRANCHISE
-                    </Typography>
-                  }
-                  item4={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      ALLOPATHIC FRANCHISE
-                    </Typography>
-                  }
-                />
-              </Grid>
-              <Grid item xs={12} md={3} lg={3}>
-                <SimpleMenu
-                  heading={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      THIRD PARTY
-                    </Typography>
-                  }
-                  item1={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      DERMA FRANCHISE
-                    </Typography>
-                  }
-                  item2={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      HOMOPATHIC FRANCHISE
-                    </Typography>
-                  }
-                  item3={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      AYURVEDIC FRANCHISE
-                    </Typography>
-                  }
-                  item4={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      ALLOPATHIC FRANCHISE
-                    </Typography>
-                  }
-                />
-              </Grid>
-              <Grid item xs={12} md={3} lg={3}>
-                <SimpleMenu
-                  heading={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      THIRD PARTY MANUFACTURE
-                    </Typography>
-                  }
-                  item1={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      DERMA FRANCHISE
-                    </Typography>
-                  }
-                  item2={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      HOMOPATHIC FRANCHISE
-                    </Typography>
-                  }
-                  item3={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      AYURVEDIC FRANCHISE
-                    </Typography>
-                  }
-                  item4={
-                    <Typography style={{ fontFamily: "Poppins" }}>
-                      ALLOPATHIC FRANCHISE
-                    </Typography>
-                  }
-                />
-              </Grid>
-            </Grid>
-          </Container>
-        </Box>
+        {/* <Container maxWidth="xl">
+          <SlideShow />
+        </Container> */}
 
-        <Grid container spacing={2}></Grid>
+        {/* <SpeedDialTooltipOpen /> */}
+        <Hidden smUp>
+          <Box
+            sx={{
+              pt: 5,
+              pb: 2,
+            }}
+          >
+            <Container maxWidth="xl">
+              <Grid container component={Paper}>
+                <Grid item xs={12} md={12} lg={12}>
+                  <Typography
+                    variant="h5"
+                    align="center"
+                    color="text.secondary"
+                    paragraph
+                    style={{ color: "#0c8540" }}
+                    className="Poppins_font"
+                    fontFamily="Poppins"
+                  >
+                    Browse Our Categories
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <SimpleMenu
+                    heading={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        CATEGORIES
+                      </Typography>
+                    }
+                    item1={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        PCD/PHARMA FRANCHISE
+                      </Typography>
+                    }
+                    item2={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        COSEMATICS
+                      </Typography>
+                    }
+                    item3={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        PHARMA BUSSINESS
+                      </Typography>
+                    }
+                    item4={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        ENT MEDICINE
+                      </Typography>
+                    }
+                  />
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <SimpleMenu
+                    heading={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        PCD FRANCHISE
+                      </Typography>
+                    }
+                    item1={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        DERMA FRANCHISE
+                      </Typography>
+                    }
+                    item2={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        HOMOPATHIC FRANCHISE
+                      </Typography>
+                    }
+                    item3={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        AYURVEDIC FRANCHISE
+                      </Typography>
+                    }
+                    item4={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        ALLOPATHIC FRANCHISE
+                      </Typography>
+                    }
+                  />
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <SimpleMenu
+                    heading={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        PHARMA FRANCHISE
+                      </Typography>
+                    }
+                    item1={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        DERMA FRANCHISE
+                      </Typography>
+                    }
+                    item2={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        HOMOPATHIC FRANCHISE
+                      </Typography>
+                    }
+                    item3={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        AYURVEDIC FRANCHISE
+                      </Typography>
+                    }
+                    item4={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        ALLOPATHIC FRANCHISE
+                      </Typography>
+                    }
+                  />
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <SimpleMenu
+                    heading={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        THIRD PARTY MANUFACTURE
+                      </Typography>
+                    }
+                    item1={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        DERMA FRANCHISE
+                      </Typography>
+                    }
+                    item2={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        HOMOPATHIC FRANCHISE
+                      </Typography>
+                    }
+                    item3={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        AYURVEDIC FRANCHISE
+                      </Typography>
+                    }
+                    item4={
+                      <Typography style={{ fontFamily: "Poppins" }}>
+                        ALLOPATHIC FRANCHISE
+                      </Typography>
+                    }
+                  />
+                </Grid>
+              </Grid>
+            </Container>
+          </Box>
+        </Hidden>
 
         <Hidden smDown>
           <Box
             sx={{
               pt: 7,
+              pb: 5,
+            }}
+          >
+            <Container maxWidth="lg">
+              <Grid container>
+                <Grid item xs={12} md={12} lg={12}>
+                  <Typography
+                    variant="h5"
+                    align="center"
+                    color="text.secondary"
+                    paragraph
+                    style={{ color: "#0c8540" }}
+                    className="Poppins_font"
+                    fontFamily="Poppins"
+                  >
+                    Browse Our Categories
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <HoverLinks
+                    heading={"CATEGORIES"}
+                    text="PCD/PHARMA FRANCHISE"
+                    text1="COSEMATICS"
+                    text2="PHARMA BUSSINESS"
+                    text3="ENT MEDICINE"
+                  />
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <HoverLinks
+                    heading={"PCD FRANCHISE"}
+                    text="DERMA FRANCHISE"
+                    text1="HOMOPATHIC FRANCHISE"
+                    text2="ALLOPATHIC FRANCHISES"
+                    text3="AYURVEDIC FRANCHISE"
+                  />
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <HoverLinks
+                    heading={"PHARMA FRANCHISE"}
+                    text="DERMA FRANCHISE"
+                    text1="HOMOPATHIC FRANCHISE"
+                    text2="ALLOPATHIC FRANCHISES"
+                    text3="AYURVEDIC FRANCHISE"
+                  />
+                </Grid>
+                <Grid item xs={12} md={3} lg={3}>
+                  <HoverLinks
+                    heading={"THIRD PARTY"}
+                    text="DERMA FRANCHISE"
+                    text1="HOMOPATHIC FRANCHISE"
+                    text2="ALLOPATHIC FRANCHISES"
+                    text3="AYURVEDIC FRANCHISE"
+                  />
+                </Grid>
+              </Grid>
+            </Container>
+          </Box>
+        </Hidden>
+
+        <div className="Sidebar_Categories" style={{ display: "none" }}>
+          <div className="Top_Categories">
+            <MenuIcon style={{ color: "white", marginLeft: "15px" }} />
+            <p className="Categories_p">Categories</p>
+            <Collapser style={{ postion: "absolute" }} />
+            {/* <ExpandMoreIcon style={{ color: "white", marginLeft: "15px" }} /> */}
+          </div>
+        </div>
+
+        <Hidden smUp>
+          <Container maxWidth="xl">
+            <SidebarTesting heading="Categories" />
+          </Container>
+        </Hidden>
+
+        <Hidden smDown>
+          <SidebarTesting1 />
+        </Hidden>
+
+        <Container
+          // component={Paper}
+          maxWidth="xl"
+          sx={{
+            pt: 5,
+            pb: 6,
+          }}
+        >
+          <CardMedia
+            component="img"
+            sx={{
+              // 16:9
+              pt: "0.25%",
+              maxWidth: 1520,
+              maxHeight: 500,
+            }}
+            image={ThirdPartyManufacture}
+            // image={mainlogo}
+            alt="random"
+          />
+        </Container>
+
+        <Container maxWidth="xl">
+          <Grid container spacing={2} sx={{ py: 5 }}>
+            <Grid item xs={12} md={3} lg={3}>
+              <ControlledAccordion heading="Third Party Manufacturer" />
+            </Grid>
+            <Grid item xs={12} md={3} lg={3}>
+              <Card2
+                sx={{ mx: 5 }}
+                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
+                heading={"Derma Manufacturer"}
+                body={
+                  " The form -derma is specifically used to name skin disorders and is used in many medical terms, especially in pathology. It ultimately comes from the Greek dérma, meaning “skin.The form -derma is specifically used to name skin disorders and is used. "
+                }
+                image={Derma}
+              />
+            </Grid>
+            {/* <Grid item xs={12} md={3} lg={3}>
+              <Card2
+                sx={{ mx: 5 }}
+                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
+                heading={"Injection Manufacturer "}
+                body={
+                  "Injection Molding: Injection Molding is a manufacturing process for producing parts in large volume. It is most typically used in mass-production processes where the same part is being created thousands or even millions of times in succession.a"
+                }
+                image={Injection}
+              />
+            </Grid> */}
+            <Grid item xs={12} md={3} lg={3}>
+              <Card2
+                sx={{ mx: 5 }}
+                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
+                heading={"Pharma Manufacturer"}
+                body={
+                  "Pharmaceutical manufacturer means any Person that develops, produces, manufactures, creates, licenses or distributes any drug, medicine or other substance used in the treatment, cure, prevention or diagnosis of any illness, disease, disorder or other condition."
+                }
+                image={Pharma}
+              />
+            </Grid>
+            <Grid item xs={12} md={3} lg={3}>
+              <Card2
+                sx={{ mx: 5 }}
+                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
+                heading={"Contract Manufacturer"}
+                body={
+                  "Pharmaceutical contract manufacturing process involves Pharmaceutical machinery, drug manufacturers contracting a firm for finished products or components. It can be seen as a type of outsourcing and outcoming.  "
+                }
+                image={Contract}
+              />
+            </Grid>
+          </Grid>
+        </Container>
+
+        <Hidden smDown>
+          <Box
+            sx={{
+              pt: 1,
               pb: 1,
             }}
           >
@@ -306,7 +474,7 @@ export default function Home() {
           <Stack
             sx={{ pt: 4, pb: 5 }}
             direction="row"
-            spacing={1}
+            spacing={2}
             justifyContent="center"
           >
             <Button
@@ -359,305 +527,40 @@ export default function Home() {
           </Stack>
         </Hidden>
 
-        <div className="Sidebar_Categories" style={{ display: "none" }}>
-          <div className="Top_Categories">
-            <MenuIcon style={{ color: "white", marginLeft: "15px" }} />
-            <p className="Categories_p">Categories</p>
-            <Collapser style={{ postion: "absolute" }} />
-            {/* <ExpandMoreIcon style={{ color: "white", marginLeft: "15px" }} /> */}
-          </div>
-          {/* <div className="Main_Categories">
-            <a href="#">
-              <HealthAndSafetyIcon />
-              PCD Pharma Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Third Party Manufacturing
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Cosematic Derma Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Allopathic Drug Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Cardiac Daibatic Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Pediatric Range Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Medicine Manufacturing Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Pharma Business Opportunties
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Homeopathic Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Derma Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Gyanae Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Neuropsychiaty Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Orto Surgery Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Pediatric Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Pharma Capsule Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Pharma Tablet Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Diabetic Product Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Third Party Franchise
-            </a>
-            <Button
-              style={{
-                background: "black",
-                color: "white",
-                borderRadius: "1 1 1 1",
-              }}
-            >
-              View More
-            </Button>
-          </div> */}
-        </div>
-
-        {/* <Grid container spacing={2}>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Pharma Monopoly Franchise"}
-                body={
-                  "Propaganda cum Distribution. In the Pharma industry, PCD is used for marketing and distribution rights."
-                }
-                image={Monoply}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Anti Cancer Drugs Franchise "}
-                body={
-                  "Anti-Cancer Drugs is an international medical journal, which aims to promote and encourage research "
-                }
-                image={Cancer}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Eye's  Drops  Franchises"}
-                body={
-                  "Problems like dry eyes, amblyopia, strabismus, age-related macular degeneration etc. become common."
-                }
-                image={EyeDrops}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Denatal Products Franchise"}
-                body={
-                  "Dental franchises are owned and operated by a managing company or investor.Dental Service Organizations "
-                }
-                image={Dental}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Injectable Phrama  Franchise "}
-                body={
-                  "Anti-Cancer Drugs is an international medical journal, which aims to promote and encourage research on anti-cancer agents"
-                }
-                image={Injectable}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Ophthalmic Pharma Franchise "}
-                body={
-                  "India is a home for approximately world’s 30% blind people. Half among these people are blind due to cataracts and others "
-                }
-                image={Ophthalmic}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Ayurvedic Pharma Franchise "}
-                body={
-                  "Ayurveda, a natural system of medicine, originated in India more than 3,000 years ago. The term Ayurveda is derived from the Sanskrit  "
-                }
-                image={Ayurvedic}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Ortho Pharma Franchise "}
-                body={
-                  "India is a home for approximately world’s 30% blind people. Half among these people are blind due to cataracts and others "
-                }
-                image={Ortho}
-              />
-            </Grid>
-          </Grid> */}
-        <Container maxWidth="xl">
-          <SidebarTesting />
-        </Container>
-
-        <Container
-          // component={Paper}
-          maxWidth="xl"
+        <Box
           sx={{
-            pt: 5,
+            pt: 1,
+            pb: 1,
+          }}
+        >
+          <Container maxWidth="xl">
+            <Grid container>
+              <Grid item xs={12} md={12} lg={12}>
+                <Typography
+                  variant="h5"
+                  align="center"
+                  color="text.secondary"
+                  paragraph
+                  style={{ color: "#0c8540" }}
+                  fontFamily="Poppins"
+                >
+                  Tru Web's Goals and Values
+                </Typography>
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
+
+        <Box
+          sx={{
+            pt: 2,
             pb: 6,
           }}
         >
-          <CardMedia
-            component="img"
-            sx={{
-              // 16:9
-              pt: "0.25%",
-              maxWidth: 1520,
-              maxHeight: 500,
-            }}
-            image={ThirdPartyManufacture}
-            alt="random"
-          />
-        </Container>
-
-        {/* <div className="Sidebar_Categories_1">
-          <div className="Top_Categories_1">
-            <MenuIcon style={{ color: "white", marginLeft: "15px" }} />
-            <p className="Categories_p_1">Categories</p>
-          </div>
-          <div className="Main_Categories_1">
-            <a href="#">
-              <HealthAndSafetyIcon />
-              PCD Pharma Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Third Party Manufacturing
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Cosematic Derma Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Allopathic Drug Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Cardiac Daibatic Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Pediatric Range Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Medicine Manufacturing Franchise
-            </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Pharma Business Opportunties
-            </a>
-          </div>
-        </div> */}
-
-        <Container maxWidth="xl">
-          <Grid container spacing={2} sx={{ py: 5 }}>
-            <Grid item xs={12} md={3} lg={3}>
-              <ControlledAccordion />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Derma Manufacturer"}
-                body={
-                  " The form -derma is specifically used to name skin disorders and is used in many medical terms, especially in pathology. It ultimately comes from the Greek dérma, meaning “skin.The form -derma is specifically used to name skin disorders and is used. "
-                }
-                image={Derma}
-              />
-            </Grid>
-            {/* <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Injection Manufacturer "}
-                body={
-                  "Injection Molding: Injection Molding is a manufacturing process for producing parts in large volume. It is most typically used in mass-production processes where the same part is being created thousands or even millions of times in succession.a"
-                }
-                image={Injection}
-              />
-            </Grid> */}
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Pharma Manufacturer"}
-                body={
-                  "Pharmaceutical manufacturer means any Person that develops, produces, manufactures, creates, licenses or distributes any drug, medicine or other substance used in the treatment, cure, prevention or diagnosis of any illness, disease, disorder or other condition."
-                }
-                image={Pharma}
-              />
-            </Grid>
-            <Grid item xs={12} md={3} lg={3}>
-              <Card2
-                sx={{ mx: 5 }}
-                style={{ height: "    230px", borderRadius: "10px 10px 0 0" }}
-                heading={"Contract Manufacturer"}
-                body={
-                  "Pharmaceutical contract manufacturing process involves Pharmaceutical machinery, drug manufacturers contracting a firm for finished products or components. It can be seen as a type of outsourcing and outcoming.  "
-                }
-                image={Contract}
-              />
-            </Grid>
-          </Grid>
-        </Container>
+          <Container maxWidth="xl">
+            <FullWidthTabs />
+          </Container>
+        </Box>
 
         <Box
           sx={{
@@ -671,7 +574,7 @@ export default function Home() {
               variant="h2"
               align="left"
               color="text.primary"
-              style={{ fontWeight: "500" }}
+              style={{ fontWeight: "500", color: "#0c8540" }}
               gutterBottom
               fontFamily="Poppins"
             >
@@ -696,7 +599,7 @@ export default function Home() {
 
             <Grid container pt={5}>
               <Grid item md={12} xs={12}>
-                <Coursal />
+                <Caursal />
               </Grid>
             </Grid>
           </Container>
@@ -710,24 +613,17 @@ export default function Home() {
                 align="center"
                 color="text.secondary"
                 paragraph
+                fontFamily="Poppins"
                 style={{ color: "#0c8540" }}
               >
                 Post Your Requirment for Pharma Companies
               </Typography>
               <Box textAlign="center">
-                <BasicPopover fullWidth style={{ marginLeft: "470px" }} />
+                <BasicPopover fullWidth />
               </Box>
             </Grid>
           </Grid>
         </Container>
-
-        {/* <Container sx={{ pt: 5, mb: 5, pb: 3 }} maxWidth="xl" component={Paper}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={12} lg={12}> */}
-
-        {/* </Grid>
-          </Grid>
-        </Container> */}
 
         <Container
           // component={Paper}
@@ -742,6 +638,7 @@ export default function Home() {
             align="center"
             color="text.secondary"
             paragraph
+            fontFamily="Poppins"
             style={{ color: "#0c8540" }}
           >
             Few words from our Customers..

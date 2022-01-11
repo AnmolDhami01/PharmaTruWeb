@@ -13,13 +13,13 @@ import ControlledAccordion from "./ControlledAccordions";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
-export default function SidebarTesting() {
+export default function SidebarTesting(props) {
   //   const classes = useStyles;
   return (
     <div>
       <Grid container spacing={2} sx={{ py: 5 }}>
         <Grid item xs={12} md={3} lg={3}>
-          <ControlledAccordion />
+          <ControlledAccordion heading={props.heading} />
         </Grid>
 
         <Grid item xs={12} md={3} lg={3}>
@@ -57,7 +57,7 @@ export default function SidebarTesting() {
         </Grid>
 
         <Grid item xs={12} md={3} lg={3} direction="column">
-          <ControlledAccordion />
+          <ControlledAccordion heading="PCD/Pharma Franchise" />
         </Grid>
         <Grid item xs={12} md={3} lg={3}>
           <Card2

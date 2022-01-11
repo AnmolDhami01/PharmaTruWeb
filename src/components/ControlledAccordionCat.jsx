@@ -71,7 +71,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function ControlledAccordion(props) {
+export default function ControlledAccordionCat(props) {
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -123,6 +123,42 @@ export default function ControlledAccordion(props) {
             <a href="#">
               <HealthAndSafetyIcon />
               Pediatric Range Franchise
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              ENT Medicine Franchise
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Pharma Business
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Pediatric Range
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Medicine Manufacturing
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Ayurvedic Herbal
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Critical Care
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Allopathic Drug Franchise
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Ayurvedic PCD Franchise
+            </a>
+            <a href="#">
+              <HealthAndSafetyIcon />
+              Cardiac Daibatic Franchise
             </a>
           </div>
         </AccordionDetails>

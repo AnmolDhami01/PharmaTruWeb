@@ -63,7 +63,7 @@ export default function SignUp() {
           <Avatar sx={{ m: 1, bgcolor: "#0c8540" }}>
             <PersonAddAltIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" fontFamily="Poppins">
             Create An Account
           </Typography>
           <Box
@@ -120,6 +120,8 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
+                  fontFamily="Poppins"
+                  sx={{ fontFamily: "Poppins" }}
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
@@ -132,7 +134,7 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              style={{ backgroundColor: "#0c8540" }}
+              style={{ backgroundColor: "#0c8540", fontFamily: "Poppins" }}
             >
               Sign Up
             </Button>

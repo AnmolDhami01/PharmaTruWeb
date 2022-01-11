@@ -87,6 +87,7 @@ body {
 .mainColor {
   color: "#0c8540";
   background-color: "#0c8540";
+  secondary-color: "#f8b500";
 }
 
 .TruMainContainer {
@@ -352,4 +353,20 @@ img {
   .text {
     font-size: 11px;
   }
+}
+
+.css-19r6kue-MuiContainer-root {
+  padding: 0 !important;
+}
+
+.css-19r6kue-MuiContainer-root {
+  padding: 0 !important;
+}
+
+/* .css-i9gxme {
+  flex-grow: 0 !important;
+} */
+
+.css-1t29gy6-MuiToolbar-root {
+  padding: 0 !important;
 }

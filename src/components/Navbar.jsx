@@ -14,13 +14,9 @@ const useStyles = makeStyles({
   section1: {
     display: "inline-flex",
 
-    padding: "10px 20px",
+    padding: "10px 0px",
   },
-  section1: {
-    display: "inline-flex",
 
-    padding: "10px 20px",
-  },
   mainDiv: {
     display: "flex",
     background: "black",
@@ -28,7 +24,7 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
   },
   Container: {
-    display: "flex",
+    display: "flex !important",
 
     alignItems: "center",
     justifyContent: "space-between",

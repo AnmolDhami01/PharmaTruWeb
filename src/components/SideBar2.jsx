@@ -43,32 +43,38 @@ export default function SideBar2() {
     >
       <List>
         {[
-          <Link className="LinkSidebar" to="/gernalMedicines">
-            General Medicines
+          <Link className="LinkSidebar" to="/pcdfranchise">
+            PCD/Pharma Franchise
           </Link>,
-          <Link className="LinkSidebar" to="/herbalAyurvedic">
-            Herbal and Ayurvedic
+          <Link className="LinkSidebar" to="/thirdparty">
+            Third Party Manufacturing
+          </Link>,
+          <Link className="LinkSidebar" to="/cosmetics">
+            Cosmetics Derma Franchise
+          </Link>,
+          <Link className="LinkSidebar" to="/ayurvedic">
+            Ayurvedic PCD Franchise
           </Link>,
           <Link className="LinkSidebar" to="/heartCardiac">
-            Heart and Cardiac
+            Cardiac Diabatic Manufacturing
           </Link>,
-          <Link className="LinkSidebar" to="/injectables">
-            Injectables
+          <Link className="LinkSidebar" to="/allopathic">
+            Allopathic Drug Manufacturing
           </Link>,
-          <Link className="LinkSidebar" to="/liverProductes">
-            Liver Productes
+          <Link className="LinkSidebar" to="/entmedcine">
+            ENT Medicine Manufacturing
           </Link>,
-          <Link className="LinkSidebar" to="/antibiotics">
-            Antibiotics and Antibacterial
+          <Link className="LinkSidebar" to="/medicine">
+            Medicine Manufacturing
           </Link>,
-          <Link className="LinkSidebar" to="/syrups">
-            Solutions, Suspensions and Syrups
+          <Link className="LinkSidebar" to="/pharmabusiness">
+            Pharma Business Opportunties
           </Link>,
-          <Link className="LinkSidebar" to="/dermatology">
-            Dermatology Products
+          <Link className="LinkSidebar" to="/herbalAyurvedic">
+            Ayurvedic Herbal Manufacturing
           </Link>,
-          <Link className="LinkSidebar" to="/otolaryngology">
-            Otolaryngology Products
+          <Link className="LinkSidebar" to="/cardiacDiabtic">
+            Critical Care Franchise
           </Link>,
         ].map((text, index) => (
           <ListItem button key={text}>

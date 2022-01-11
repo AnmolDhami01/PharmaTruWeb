@@ -18,7 +18,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import TextArea from "./TextArea";
 import { Paper } from "@mui/material";
 import { LocationCitySharp, PhoneInTalkSharp } from "@mui/icons-material";
-
+import SendIcon from "@mui/icons-material/Send";
 export default function BasicPopover() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -49,6 +49,13 @@ export default function BasicPopover() {
         variant="contained"
         style={{ color: "white" }}
         onClick={handleClick}
+        fullWidth
+        startIcon={<SendIcon />}
+        style={{
+          backgroundColor: "#0c8540",
+          color: "white",
+          fontFamily: "Poppins",
+        }}
       >
         Send Requirment
       </Button>
