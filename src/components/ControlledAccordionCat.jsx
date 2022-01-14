@@ -12,12 +12,13 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
+import { Button } from "@mui/material";
+import { Box } from "@mui/system";
 const useStyles = makeStyles({
   links: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start",
-    color: "#0c8540 ",
+    color: "white ",
     textDecoration: "none",
     fontSize: "15px",
     lineHeight: 2.2,
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
 
     "& a": {
       textDecoration: "none",
-      color: "#0c8540",
+      color: "white",
     },
   },
   links1: {
@@ -81,11 +82,12 @@ export default function ControlledAccordionCat(props) {
   return (
     <div>
       <Accordion
+        sx={{ color: "white ", backgroundColor: "#0c8540 " }}
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
           aria-controls="panel1a-content"
           id="panel1d-header"
         >
@@ -156,10 +158,18 @@ export default function ControlledAccordionCat(props) {
               <HealthAndSafetyIcon />
               Ayurvedic PCD Franchise
             </a>
-            <a href="#">
-              <HealthAndSafetyIcon />
-              Cardiac Daibatic Franchise
-            </a>
+            <Box textAlign="center">
+              <center>
+                {" "}
+                <Button
+                  variant="contained"
+                  size="small"
+                  sx={{ backgroundColor: "#f8b500" }}
+                >
+                  View More
+                </Button>
+              </center>
+            </Box>
           </div>
         </AccordionDetails>
       </Accordion>

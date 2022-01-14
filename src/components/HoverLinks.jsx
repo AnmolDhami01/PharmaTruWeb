@@ -2,10 +2,9 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
-import Typography from "@mui/material/Typography";
-import { Grid } from "@mui/material";
-import SimpleMenu from "./SimpleMenu";
-import { typography } from "@mui/system";
+
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 import HoveredLinks from "./HoveredLinks";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 
@@ -37,12 +36,24 @@ export default function HoverLinks(props) {
         }
       >
         <Button
-          variant="contained"
-          sx={{ color: "white", backgroundColor: "#0c8540" }}
-          startIcon={<MedicalServicesIcon />}
+          variant="outlined"
+          sx={{
+            color: "#0C8540",
+            fontFamily: "Poppins",
+            background: "white",
+            height: "35px",
+            "&:hover": {
+              backgroundColor: "white",
+            },
+            "&:focus": {
+              backgroundColor: "white",
+            },
+          }}
+          endIcon={<ExpandMoreIcon />}
         >
-          <Typography fontFamily="Poppins">{props.heading}</Typography>
+          {props.heading}
         </Button>
+        {/* <Typography fontFamily="Poppins">{props.heading}</Typography> */}
       </HtmlTooltip>
     </div>
   );

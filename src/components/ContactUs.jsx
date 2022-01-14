@@ -13,7 +13,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import EmailIcon from "@mui/icons-material/Email";
-import TextArea from "./TextArea";
+
 import { Paper } from "@mui/material";
 import { LocationCitySharp, PhoneInTalkSharp } from "@mui/icons-material";
 
@@ -23,6 +23,7 @@ function Copyright(props) {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
   return (
     <Typography
       variant="body2"
@@ -42,7 +43,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function ContactUs() {
+export default function ContactUs2() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -55,84 +56,8 @@ export default function ContactUs() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
-        <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundColor: (t) =>
-              t.palette.mode === "light"
-                ? t.palette.grey[50]
-                : t.palette.grey[900],
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <Box
-            sx={{
-              marginTop: 8,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography component="h1" variant="h5">
-              Feel Free To Ask Questions Or Share Your Thoughts With Us
-            </Typography>
-            <Grid item xs={12} sm={6}>
-              <Grid item>
-                <Typography component="h2" variant="h5" pl={3} pt={5}>
-                  <Button>
-                    <PhoneInTalkSharp
-                      style={{
-                        width: "100px",
-                        height: "100px",
-                        color: "black",
-                      }}
-                    />
-                  </Button>
-                  Phone
-                </Typography>
-                <Typography
-                  component="h2"
-                  variant="h5"
-                  className="ContactPhone"
-                  style={{ left: "390px", top: "270px", position: "absolute" }}
-                >
-                  Call: +91-86288-25697
-                </Typography>
-              </Grid>
-              <Typography component="h2" variant="h5" pl={3} pt={5}>
-                <Button>
-                  <LocationCitySharp
-                    style={{
-                      width: "100px",
-                      height: "100px",
-                      color: "black",
-                    }}
-                  />
-                </Button>
-                Office Location
-              </Typography>
-              <Typography
-                component="h2"
-                variant="h5"
-                style={{
-                  left: "387px",
-                  top: "421px",
-                  position: "absolute",
-                  width: "325px",
-                }}
-              >
-                SCO-914, Cabin NO. B4, 2nd Floor Near Housing Board Chowk, NAC
-                Manimajra, Chandigarh
-              </Typography>
-            </Grid>
-          </Box>
-        </Grid>
-        <Container component="main" component={Paper} maxWidth="xs">
+      <Grid>
+        <Container maxWidth="xl">
           <CssBaseline />
 
           <Box
@@ -143,12 +68,13 @@ export default function ContactUs() {
               alignItems: "center",
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <Avatar sx={{ m: 1, bgcolor: "#0c8540" }}>
               <EmailIcon />
             </Avatar>
             <Typography component="h2" variant="h5">
               Get in touch!
             </Typography>
+
             <Box
               component="form"
               noValidate
@@ -202,28 +128,46 @@ export default function ContactUs() {
                     autoComplete="number"
                   />
                 </Grid>
-
-                <Grid item xs={12}>
-                  <FormControlLabel
-                    control={
-                      <Checkbox value="allowExtraEmails" color="primary" />
-                    }
-                    label="I want to receive inspiration, marketing promotions and updates via email."
-                  />
-                </Grid>
+                <Box
+                  component="form"
+                  sx={{
+                    "& .MuiTextField-root": { m: 1, width: "25ch" },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                ></Box>
               </Grid>
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                style={{ backgroundColor: "#0c8540" }}
               >
-                Sign Up
+                Send Message
               </Button>
             </Box>
           </Box>
         </Container>
       </Grid>
+      {/* <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
+        <Typography variant="h6" align="center" gutterBottom>
+          PharmaTruWeb
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
+          The main purpose of PharmaTruWeb.com is to bring together entire
+          Pharma Industry at one place and provide a platform to importers,
+          exporters, manufacturers, traders, services providers, distributors,
+          wholesalers and governmental agencies to find trade opportunities and
+          promote their products and services online
+        </Typography>
+        <Copyright />
+      </Box> */}
     </ThemeProvider>
   );
 }

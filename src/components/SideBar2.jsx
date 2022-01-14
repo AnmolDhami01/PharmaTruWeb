@@ -90,22 +90,6 @@ export default function SideBar2() {
         ))}
       </List>
       <Divider />
-      {/* <List>
-        {["All Cilents", "Medicine", "Health and Fitness Realted Products"].map(
-          (text, index) => (
-            <ListItem button key={text}>
-              <MedicalServicesTwoToneIcon>
-                {index % 2 === 0 ? (
-                  <MedicalServicesTwoToneIcon />
-                ) : (
-                  <MedicalServicesTwoToneIcon />
-                )}
-              </MedicalServicesTwoToneIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          )
-        )}
-      </List> */}
     </Box>
   );
 

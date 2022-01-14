@@ -7,11 +7,8 @@ import EyeDrops from "../static/download.jpg";
 import Dental from "../static/dental.jpg";
 import Injectable from "../static/Injectable.jpg";
 import Ophthalmic from "../static/Ophthalmic.jpg";
-import Ortho from "../static/Ortho.jpg";
-import Ayurvedic from "../static/Ayurvedic.jpg";
+
 import ControlledAccordion from "./ControlledAccordions";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 
 export default function SidebarTesting(props) {
   //   const classes = useStyles;

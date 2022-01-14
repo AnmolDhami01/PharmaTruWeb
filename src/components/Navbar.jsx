@@ -1,149 +1,79 @@
-import React, { useContext } from "react";
+import { Button, Container, Hidden } from "@mui/material";
+import React from "react";
+import { Link } from "react-router-dom";
+import mainlogo from "../static/mainlogo.png";
+import HoverLinks from "./HoverLinks";
+import PersonIcon from "@mui/icons-material/Person";
+import LoginTesting from "./SiginTesting";
 
-import { makeStyles } from "@mui/styles";
+import ContactusTesting from "./ContactusTesting";
+import CreateUser from "./CreateUser";
+import SiginTesting from "./SiginTesting";
 
-import Button from "@mui/material/Button";
-import { Mail, MailOutlineSharp, PhoneInTalkSharp } from "@mui/icons-material";
-import { Container, Hidden, Typography } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
-const useStyles = makeStyles({
-  section1: {
-    display: "inline-flex",
-
-    padding: "10px 0px",
-  },
-
-  mainDiv: {
-    display: "flex",
-    background: "black",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  Container: {
-    display: "flex !important",
-
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-});
-function Navbar() {
-  const classes = useStyles();
+export default function Navbar() {
   return (
-    <div className={classes.mainDiv}>
-      <Container maxWidth="xl" className={classes.Container}>
-        <div className={classes.section1}>
-          <Typography pr={2}>
-            <a
-              href="mailto:Info@tru-web.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                paddingRight: "15px",
-              }}
-            >
-              <Mail
-                style={{
-                  color: "white",
-                  marginLeft: "25px",
-                  marginRight: "7px",
-                }}
-              />
-              <Hidden smDown>Info@tru-web.com</Hidden>
-            </a>
-          </Typography>
-          <Typography>
-            <a
-              href="tel:8628825697"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                // paddingRight: "908px",
-              }}
-            >
-              <PhoneInTalkSharp
-                style={{ color: "white", marginRight: "7px" }}
-              />
-              <Hidden smDown>+91-8628825697</Hidden>
-            </a>
-          </Typography>
-        </div>
-
-        <div className={classes.section1}>
-          <Typography>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                paddingRight: "25px",
-              }}
-            >
-              <FacebookIcon style={{ color: "white" }} />
-              {/* <Hidden smDown>Fb.com/tru-webmedia</Hidden> */}
-            </a>
-          </Typography>
-
-          <Typography>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                paddingRight: "25px",
-              }}
-            >
-              <InstagramIcon style={{ color: "white" }} />
-              {/* <Hidden smDown>Instagram.com/tru-webmedia</Hidden> */}
-            </a>
-          </Typography>
-
-          <Typography>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                paddingRight: "25px",
-              }}
-            >
-              <TwitterIcon style={{ color: "white" }} />
-              {/* <Hidden smDown>Twitter.com/tru-webmedia</Hidden> */}
-            </a>
-          </Typography>
-
-          <Typography>
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                paddingRight: "25px",
-              }}
-            >
-              <LinkedInIcon style={{ color: "white" }} />
-              {/* <Hidden smDown>LinkedIn.com/tru-webmedia</Hidden> */}
-            </a>
-          </Typography>
-        </div>
-      </Container>
-    </div>
+    <>
+      <div className="navDiv">
+        <Container maxWidth="xl" sx={{ padding: "0 !important" }}>
+          <input type="checkbox" id="check" />
+          <nav>
+            <div className="icon">
+              <Link to="/">
+                <img
+                  style={{ width: "180px", height: "47px" }}
+                  src={mainlogo}
+                  alt="mainlogo"
+                  srcSet=""
+                />
+              </Link>
+            </div>
+            <div className="search_box">
+              <Hidden smDown>
+                <HoverLinks
+                  heading={"Categories"}
+                  text="DERMA FRANCHISE"
+                  text1="HOMOPATHIC FRANCHISE"
+                  text2="ALLOPATHIC FRANCHISES"
+                  text3="AYURVEDIC FRANCHISE"
+                />
+              </Hidden>
+              <input type="search" placeholder="Search here" />
+              <span className="fa fa-search"></span>
+            </div>
+            <ol>
+              <li>
+                {/* <Link to="/login">
+                  <Button sx={{ color: "white" }} startIcon={<PersonIcon />}>
+                    Join Free
+                  </Button>
+                </Link> */}
+                <CreateUser />
+              </li>
+              <li>
+                {/* <Link to="/sigin">
+                  <Button sx={{ color: "white" }} startIcon={<PersonIcon />}>
+                    Sign In
+                  </Button>
+                </Link> */}
+                <SiginTesting />
+              </li>
+              <li>
+                {/* <Link to="/contactus">
+                  <Button sx={{ color: "white" }} startIcon={<PersonIcon />}>
+                    Post Requirment
+                  </Button>
+                </Link> */}
+                <ContactusTesting />
+              </li>
+            </ol>
+            <label htmlFor="check" className="bar">
+              <span className="fa fa-bars" id="bars"></span>
+              <span className="fa fa-times" id="times"></span>
+            </label>
+          </nav>
+        </Container>
+        {/* <section></section> */}
+      </div>
+    </>
   );
 }
-
-export default Navbar;
